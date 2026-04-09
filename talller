@@ -1,0 +1,19 @@
+let nombreCompleto=""; 
+let edad=0;
+let tipoDeDocumento="";
+let numeroDocumento="";
+let salario=0;
+let comsiones=0;
+let totalDeHorasExtra=0;
+let clasificaciónDeNivelDeRiesgo="";
+
+const salarioMinimoLV=1750905;
+const salarioMinimoIV=22761765;
+const subsidioDeTransporte=249095;
+const unidadDeValorTributario=52.37;
+const riesgoI_Minimo=0.522;
+const riesgoII_Bajo=1.044;
+const riesgoIII_Medio=2.436;
+const riegoIV_Alto=4.350;
+const riesgoV_Maximo=6.960;
+
