@@ -1,19 +1,52 @@
-let nombreCompleto=""; 
-let edad=0;
-let tipoDeDocumento="";
-let numeroDocumento="";
-let salario=0;
-let comsiones=0;
-let totalDeHorasExtra=0;
-let clasificaciónDeNivelDeRiesgo="";
+let nombreCompleto = ""; 
+let edad = 0;
+let tipoDeDocumento =  "";
+let numeroDocumento = "";
+let salario = 0;
+let comsiones = 0;
+let horasExtra = 0;
+let clasificaciónDeNivelDeRiesgo = "";
 
-const salarioMinimoLV=1750905;
-const salarioMinimoIV=22761765;
-const subsidioDeTransporte=249095;
-const unidadDeValorTributario=52.37;
-const riesgoI_Minimo=0.522;
-const riesgoII_Bajo=1.044;
-const riesgoIII_Medio=2.436;
-const riegoIV_Alto=4.350;
-const riesgoV_Maximo=6.960;
+if (edad < 18) {
+    console.log ("No se puede calcular");
+}
+
+else if (edad >= 18 && edad < 25 ) {
+    console.log ("Usuario beneficiario por cotizante");
+
+}
+
+else if (edad >= 25 && edad < 60) {
+    console.log ("Se calcular la pensión")
+}
+
+else {
+    console.log ("Podra continuar con el siguiente paso del procesor")
+}
+
+
+const salarioMinimoLV = 1750905;
+const salarioMinimoIV = 22761765;
+const subsidioDeTransporte = 249095;
+const unidadDeValorTributario = 52.37;
+const riesgoI_Minimo =  0.522;
+const riesgoII_Bajo = 1.044;
+const riesgoIII_Medio = 2.436;
+const riegoIV_Alto = 4.350;
+const riesgoV_Maximo = 6.960;
+const porcentajeIBC = 0.7;
+const porcentajesalud = 0.04;
+const porcentajepension = 0.04;
+const porcentajeFondoSolidaridad = 0.01;
+
+let fondoSolaridad = IBC * porcentajeFondoSolidaridad;
+IBC >= 4 * salarioMinimoLV ? fondoSolaridad : fondoSolaridad = 0;
+
+let salarTotal =salario + comisiones + horasExtra;
+let IBC = salarioTotal * porcentajeIBC;
+let salud = IBC * porcentajesalud;
+let pension = IBC * porcentajepension;
+
+
+
 
