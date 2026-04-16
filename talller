@@ -24,6 +24,9 @@ else {
     console.log ("Podra continuar con el siguiente paso del procesor")
 }
 
+function calcularPorcentaje (base,porcentaje){
+    return base * porcentaje;
+}
 
 const salarioMinimoLV = 1750905;
 const salarioMinimoIV = 22761765;
@@ -46,6 +49,9 @@ let salarTotal =salario + comisiones + horasExtra;
 let IBC = salarioTotal * porcentajeIBC;
 let salud = IBC * porcentajesalud;
 let pension = IBC * porcentajepension;
+
+
+
 
 
 
