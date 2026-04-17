@@ -32,23 +32,20 @@ const salarioMinimoLV = 1750905;
 const salarioMinimoIV = 22761765;
 const subsidioDeTransporte = 249095;
 const unidadDeValorTributario = 52.37;
-const riesgoI_Minimo =  0.522;
-const riesgoII_Bajo = 1.044;
-const riesgoIII_Medio = 2.436;
-const riegoIV_Alto = 4.350;
-const riesgoV_Maximo = 6.960;
 const porcentajeIBC = 0.7;
 const porcentajesalud = 0.04;
 const porcentajepension = 0.04;
 const porcentajeFondoSolidaridad = 0.01;
 
-let fondoSolaridad = IBC * porcentajeFondoSolidaridad;
+const riesgo = [0.522,1.044,2.436,4.350,6.960]
+
+let fondoSolaridad = calcularPorcentaje (IBC.porcentajeFondoSolidaridad);
 IBC >= 4 * salarioMinimoLV ? fondoSolaridad : fondoSolaridad = 0;
 
-let salarTotal =salario + comisiones + horasExtra;
-let IBC = salarioTotal * porcentajeIBC;
-let salud = IBC * porcentajesalud;
-let pension = IBC * porcentajepension;
+let salarioTotal =salario + comisiones + horasExtra;
+let IBC = calcularPorcentaje (salarioTotal,porcentajeIBC);
+let salud = calculaPorcentaje (IBC,porcentajesalud);
+let pension = calcularPorcentaje (IBC,porcentajepension);
 
 
 
