@@ -1,15 +1,11 @@
-let nombreCompleto = prompt ("Poner su Nombre Completo");
-console.log ("nombreCompleto"); 
-let edad = prompt ("Poner Edad");
-console.log ("edad"); 
-let tipoDeDocumento =  prompt ("Poner Tipo de Documento");
-console.log ("tipoDeDocumento");
-let numeroDocumento = prompt ("Poner Número de Documento");
-console.log ("numeroDocumento");
-let salario = 0;
-let comsiones = 0;
-let horasExtra = 0;
-let clasificaciónDeNivelDeRiesgo = "";
+let nombreCompleto = document.getElementBy(nombreCompleto).value;
+let edad = document.getElementBy(edad).value;
+let tipoDeDocumento = document.getElementBy(tipoDeDocumento).value;
+let numeroDocumento = document.getElementBy(numeroDocumento).value;
+let salario = document.getElementBy(salario).value;
+let comsiones = document.getElementBy(coisiones).value;
+let horasExtra = document.getElementBy(horasExtra).value;
+let clasificaciónDeNivelDeRiesgo = document.getElementBy(clasificaciónDeNivelDeRiesgo).value;
 
 if (edad < 18) {
     console.log ("No se puede calcular");

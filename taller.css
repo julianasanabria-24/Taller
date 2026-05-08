@@ -1,50 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0A2353, #112C70, #5B58EB, #bb63ff );}
 
 
 #registro-usuario {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 320px;
+    width: 380px;
+    padding: 35px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
 
 #registro-usuario label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-
-#registro-usuario input,
-#registro-usuario select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-
-#registro-usuario input[type="button"] {
-    margin-top: 20px;
-    background-color: #007bff;
     color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    margin-top: 5px;
 }
 
 
-#registro-usuario input[type="button"]:hover {
-    background-color: #0056b3;
+
+#registro-usuario input[type="text"],
+#registro-usuario input[type="number"],
+#registro-usuario select {
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+
+
+#registro-usuario input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+
+
+#registro-usuario input:focus,
+#registro-usuario select:focus {
+    outline: none;
+    border-color: #56E1E9;
+    box-shadow:
+        0 0 12px rgba(86,225,233,0.5);
+}
+
+
+#registro-usuario select option {
+    color: black;
+}
+
+
+#registro-usuario input[type="submit"] {
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient( 135deg, #56E1E9, #5B58EB, #BB63FF );
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+#registro-usuario input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    }
+
+
+#registro-usuario input[type="submit"]:active {
+    transform: scale(0.97);
 }
