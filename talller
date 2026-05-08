@@ -5,7 +5,7 @@ console.log ("edad");
 let tipoDeDocumento =  prompt ("Poner Tipo de Documento");
 console.log ("tipoDeDocumento");
 let numeroDocumento = prompt ("Poner Número de Documento");
-console.log ("numeroDocumento")
+console.log ("numeroDocumento");
 let salario = 0;
 let comsiones = 0;
 let horasExtra = 0;
