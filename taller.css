@@ -71,8 +71,8 @@ body {
     padding: 15px;
     border: none;
     border-radius: 14px;
-    background: linear-gradient( 135deg, #56E1E9, #5B58EB, #BB63FF );
-    color: white;
+    background: #74f8ff91;
+    color: rgb(255, 255, 255);
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
@@ -82,10 +82,16 @@ body {
 
 #registro-usuario input[type="submit"]:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.17);
     }
 
 
 #registro-usuario input[type="submit"]:active {
     transform: scale(0.97);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
