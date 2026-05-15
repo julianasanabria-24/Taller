@@ -10,20 +10,15 @@ let clasificaciónDeNivelDeRiesgo = document.getElementBy(clasificaciónDeNivelD
 if (edad < 18) {
     console.log ("No se puede calcular");
 }
-
 else if (edad >= 18 && edad < 25 ) {
     console.log ("Usuario beneficiario por cotizante");
-
 }
-
 else if (edad >= 25 && edad < 60) {
     console.log ("Se calcular la pensión")
 }
-
 else {
     console.log ("Podra continuar con el siguiente paso del procesor")
 }
-
 function calcularPorcentaje (base,porcentaje){
     return base * porcentaje;
 }

@@ -1,57 +1,65 @@
 <!DOCTYPE html> 
 <html lang="es"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Título</title> 
-        <link rel="stylesheet" href="taller.css">
-    </head> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Simulador Laboral 2026</title> 
+    <link rel="stylesheet" href="taller.css">
+</head> 
 
-    <body> 
-        <script src="script.js"></script> 
-<form id="registro-usuario">
+<body> 
+    <form id="registro-usuario">
+        <label for="nombreCompleto">Nombre Completo:</label>
+        <input type="text" id="nombreCompleto" name="nombre" 
+               minlength="3" maxlength="100" 
+               placeholder="Ej: Juliana Pérez" required>
 
-    <label for="nombreCompleto">Nombre Completo:</label>
-    <input type="text" id="nombreCompleto" name="nombre" minlength="0" maxlength="20" required>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" 
+               min="18" max="120" 
+               placeholder="Ej: 25" required>
+        
+        <label for="tipoDeDocumento">Tipo de Documento:</label>
+        <select id="tipoDeDocumento" name="tipoDocumento" required>
+            <option value="" disabled selected>Seleccione una opción</option>
+            <option value="CC">Cédula de Ciudadanía</option>
+            <option value="TI">Tarjeta de Identidad</option>
+            <option value="CE">Cédula de Extranjería</option>
+            <option value="PAS">Pasaporte</option>
+        </select>
 
+        <label for="numeroDocumento">Número de Documento:</label>
+        <input type="text" id="numeroDocumento" name="numeroDocumento" 
+               pattern="\d+" title="Ingrese solo números sin puntos ni comas" 
+               minlength="7" maxlength="15" 
+               placeholder="Ej: 1020333444" required>
 
-    <label for="edad">Edad:</label>
-    <input type="number" id="edad" name="edad" min="18" max="120" placeholder="Ej: 25" required>
+        <label for="salario">Salario:</label>
+        <input type="number" id="salario" name="salario" 
+               min="1750905" max="100000000" step="1" 
+               placeholder="Mínimo: 1750905" required>
+
+        <label for="comisiones">Comisiones:</label>
+        <input type="number" id="comisiones" name="comisiones" 
+               min="0" step="1" placeholder="0" required>
+
+        <label for="horasExtra">Horas Extra:</label>
+        <input type="number" id="horasExtra" name="horasExtra" 
+               min="0" step="1" placeholder="0" required>
+
+        <label for="clasificaciónDeNivelDeRiesgo">Nivel de Riesgo:</label>
+        <select id="clasificaciónDeNivelDeRiesgo" name="nivelRiesgo" required>
+            <option value="" disabled selected>Seleccione un nivel</option>
+            <option value="I">Nivel 1 (Riesgo Mínimo)</option>
+            <option value="II">Nivel 2</option>
+            <option value="III">Nivel 3</option>
+            <option value="IV">Nivel 4</option>
+            <option value="V">Nivel 5 (Riesgo Máximo)</option>
+        </select>
+
+        <input type="submit" value="Calcular">
+    </form>
     
-    <label for="tipoDeDocumento">Tipo de Documento:</label>
-    <select id="tipoDeDocumento" name="tipoDocumento" required>
-      <option value="" disabled selected>Seleccione una opción</option>
-      <option value="CC">Cédula de Ciudadanía</option>
-      <option value="TI">Tarjeta de Identidad</option>
-      <option value="CE">Cédula de Extranjería</option>
-       <option value="PAS">Pasaporte</option>
-    </select>
-
-    <label for="numeroDocumento">Número de Documento:</label>
-    <input type="text" id="numeroDocumento" name="numeroDocumento" minlength="9" maxlength="15" required>
-
-    <label for="salario">Salario:</label>
-    <input type="number" id="salario" name="salario" min="1750905" max="50000000"step="1" placeholder="Mínimo: 1750905" required>
-
-    <label for="comisiones">Comisiones:</label>
-    <input type="number" id="comisiones" name="comisiones" min="0" step="1" required>
-
-    <label for="horasExtra">Horas Extra:</label>
-    <input type="number" id="horasExtra" name="horasExtra" min="0" step="1" required>
-
-    <label for="clasificaciónDeNivelDeRiesgo">Nivel de Riesgo:</label>
-    <select id="clasificaciónDeNivelDeRiesgo" name="nivelRiesgo" required>
-        <option value="" disabled selected>Seleccione un nivel</option>
-        <option value="I">Nivel 1</option>
-        <option value="II">Nivel 2</option>
-        <option value="III">Nivel 3</option>
-        <option value="IV">Nivel 4</option>
-        <option value="V">Nivel 5</option>
-    </select>
-
-     <input type="submit" value="Calcular">
-</form>
-    </body> 
-    </html>
-
-    
+    <script src="script.js"></script> 
+</body> 
+</html>
